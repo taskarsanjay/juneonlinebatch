@@ -1,3 +1,14 @@
+<h1>Pipe Demo</h1>
+<h2 [ngStyle]="myInvestment"> the invest:{{amount|currency}}</h2>
+<h2>{{fullname|lowercase}}</h2>
+<h2> Todays date is ={{todaysDate|date:'dd/MMM/yyyy'}}
+<h2> Todays Time is ={{todaysDate|date:'hh:mm:ss'}}
+<h2> Todays Date & Time is ={{todaysDate|date:'dd-MM-yy hh:mm:ss'}}
+<h3> JSON</h3>
+{{student|json}}
+<h3> Custom pipe</h3>
+<h4> The cube of {{num}} is {{num|cube}}
+<hr>
 <h1 [ngStyle]="myColor"> Hello Friends, this is my first components</h1>
 
 <input type ="text" id="txtName" [ngStyle]="myColor">

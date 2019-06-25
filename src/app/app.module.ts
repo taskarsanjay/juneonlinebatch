@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {StudentComponent} from  './student.component'
 import {TecherComponent} from './teacher.component'
 import { fromEventPattern } from 'rxjs';
+import { CubePipe } from './pipe/cube.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
-    TecherComponent
+    TecherComponent,
+    CubePipe
   ],
   imports: [
     BrowserModule,

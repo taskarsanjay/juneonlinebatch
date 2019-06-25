@@ -10,10 +10,13 @@ import { Component } from '@angular/core' // Dependency
 export class StudentComponent {
 
         public myColor = { color: 'Yellow' }
+        public fullname:string ='Sanjay Taskar'
         public amount = 150000;
+        public todaysDate=new Date()
         public isHidden: boolean = true
         public myInvestment = { color: 'back' }
         public data = [1, 2, 3, 4, 5, 6];
+        public num=3;
         public student:any=[
                 {name:'sanjay', city:'Pune', rollno:1},
                 {name:'Amol', city:'Nasik', rollno:2},
