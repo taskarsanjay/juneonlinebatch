@@ -1,0 +1,36 @@
+<h2>{{title}}</h2>
+{{studentModel.value|json}}
+<form #studentModel="ngForm">
+<div class="col-md-4">
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" class="form-control" name="FirstName" #txtname="ngModel" [(ngModel)]="name" required>
+</div>
+<div class="alert alert-danger" [hidden]="txtname.valid">
+Name is required
+</div>
+
+<div class="form-group">
+<label for="City">City:</label>
+<input type="text" class="form-control" name="City"  [(ngModel)]="city">
+</div>
+
+<div class="form-group">
+<label for="Phone">Phone:</label>
+<input type="text" class="form-control" name="Phone" [(ngModel)]="state" >
+</div>
+</div>
+<div class="col-md-8">
+<div class="form-group">
+<label for="Email">Email:</label>
+<input type="text" class="form-control" name="Email" [(ngModel)]="email" #txtemail="ngModel" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+</div>
+<div class="alert alert-danger" [hidden]="txtemail.valid">
+Enter valid email id.
+</div>
+<div class="form-group">
+<button type="submit" (click)="saveStudent(studentModel.value)" class="btn btn-primary">Save</button>
+</div>
+</div>
+
+</form>
