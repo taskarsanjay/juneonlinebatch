@@ -8,6 +8,7 @@ import {TecherComponent} from './teacher.component'
 import { fromEventPattern } from 'rxjs';
 import { CubePipe } from './pipe/cube.pipe';
 import { TemplateFormComponent } from './Forms/template.component';
+import { DoctorComponent } from './Forms/doctor.component';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -15,7 +16,8 @@ import { TemplateFormComponent } from './Forms/template.component';
     StudentComponent,
     TecherComponent,
     CubePipe,
-    TemplateFormComponent
+    TemplateFormComponent,
+    DoctorComponent
   ],
   imports: [ // Modules
     BrowserModule,
@@ -23,6 +25,6 @@ import { TemplateFormComponent } from './Forms/template.component';
     FormsModule
   ],
   providers: [], // services - Injectable
-  bootstrap: [TemplateFormComponent]// Only component directives which we want to set as startup component
+  bootstrap: [DoctorComponent]// Only component directives which we want to set as startup component
 })
 export class AppModule { }

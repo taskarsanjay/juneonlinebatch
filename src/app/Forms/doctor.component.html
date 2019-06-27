@@ -1,0 +1,38 @@
+<h2>{{title}}</h2>
+{{doctorModel.value|json}}
+<form #doctorModel="ngForm">
+<div class="row">
+<div class="col-md-3">
+<div class="form-group">
+<label for="Name">Name:</label>
+<input type="text" name="Name" class="form-control" #txtName="ngModel" [(ngModel)]="name" required>
+</div>
+<div class="alert alert-danger" [hidden]="txtName.valid">
+Name is required.
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="Name">City:</label>
+<input type="text" name="Cty" class="form-control" [(ngModel)]="city">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<div class="form-group">
+<label for="Email">Email:</label>
+<input type="text" name="eMail" class="form-control" [(ngModel)]="email" email>
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="Phone">Phone:</label>
+<input type="text" name="Phone" class="form-control" [(ngModel)]="phone">
+</div>
+</div>
+</div>
+<div class="row">
+<button type="submit" class="btn btn-primary" (click)="saveInfo(doctorModel.value)"> Save</button>
+</div>
+</form>
