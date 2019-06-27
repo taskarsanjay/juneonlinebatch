@@ -1,15 +1,14 @@
-import {Component} from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
-    selector:'doc-comp',
-    templateUrl:'./doctor.component.html'
+    selector: 'doc-comp',
+    templateUrl: './doctor.component.html'
 })
 
-export class DoctorComponent{
-public title='My Template driven form Demo'
+export class DoctorComponent {
+    public title = 'My Template driven form Demo'
 
-public saveInfo(data:any){
-alert(JSON.stringify(data))
-
-}
+    public saveInfo(data: any) {
+        alert(JSON.stringify(data))
+    }
 }

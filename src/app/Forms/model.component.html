@@ -1,0 +1,47 @@
+<h1> {{title}}</h1>
+{{employeeModel.value|json}}
+<form [formGroup]="employeeModel" novalidate>
+<div class="row">
+    <div class="col-md-4 col-sm-4">
+        <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" formControlName="Name">
+        </div>
+        <div class="alert alert-danger" *ngIf="employeeModel.controls['Name'].hasError('required')">
+        Name is required.
+        </div>
+        <div class="alert alert-danger" *ngIf="employeeModel.controls['Name'].hasError('maxlength')">
+        Name length should be atleast 5 charters.
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" formControlName="Phone">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-sm-4">
+        <div class="form-group">
+        <label for="City">City</label>
+        <input type="text" class="form-control" formControlName="City">
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" class="form-control" formControlName="Email">
+        </div>
+        <div class="alert alert-danger" *ngIf="employeeModel.controls['Email'].hasError('required')">
+        Email id is required.
+        </div>
+        <div class="alert alert-danger" *ngIf="employeeModel.controls['Email'].hasError('email')">
+        Enter proper email id.
+        </div>
+    </div>
+</div>
+<div class="row">
+<button type="submit" class="btn btn-primary" (click)="SaveEmployee(employeeModel.value)">Save</button>
+</div>
+</form>
