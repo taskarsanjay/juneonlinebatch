@@ -1,39 +1,31 @@
 import { Component } from '@angular/core' // Dependency
+import { StudentService } from './services/student.service'
 // Component/ Directive/ Injectable/ NgModule/ Pipe
 
 // Decorater -> which attach behaviour to class
 @Component({
         selector: 'stud-comp',  // place holder for this component
-        templateUrl: './student.component.html'
+        templateUrl: './student.component.html',
+       // providers: [StudentService] // Local registration
 })
 
 export class StudentComponent {
+        constructor(private sts: StudentService) {
 
-        public myColor = { color: 'Yellow' }
-        public fullname:string ='Sanjay Taskar'
-        public amount = 150000;
-        public todaysDate=new Date()
-        public isHidden: boolean = true
-        public myInvestment = { color: 'back' }
-        public data = [1, 2, 3, 4, 5, 6];
-        public num=3;
-        public student:any=[
-                {name:'sanjay', city:'Pune', rollno:1},
-                {name:'Amol', city:'Nasik', rollno:2},
-                {name:'Aniket', city:'Pune', rollno:3},
-                {name:'Sachin', city:'Mumbai', rollno:4}
-        ]
-        public ValidateMyInvestment() {
+        }      
 
-                if (this.amount >= 150000) {
-
-                        this.myInvestment = { color: 'green' }
-                } else {
-                        this.myInvestment = { color: 'red' }
-                }
+        public myStudentDetail: any
+        public GetStudentData() {
+                this.myStudentDetail = this.sts.GetAllStudent();
         }
-        public toggle() {
-                this.isHidden = !this.isHidden
+
+        public userDetails:any;
+
+        public GetUserInfo(){
+
+                this.userDetails=this.sts.GetUserDetails();
         }
+
+
 
 }

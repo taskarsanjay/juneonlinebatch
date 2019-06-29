@@ -1,45 +1,17 @@
-<h1>Pipe Demo</h1>
-<h2 [ngStyle]="myInvestment"> the invest:{{amount|currency}}</h2>
-<h2>{{fullname|lowercase}}</h2>
-<h2> Todays date is ={{todaysDate|date:'dd/MMM/yyyy'}}
-<h2> Todays Time is ={{todaysDate|date:'hh:mm:ss'}}
-<h2> Todays Date & Time is ={{todaysDate|date:'dd-MM-yy hh:mm:ss'}}
-<h3> JSON</h3>
-{{student|json}}
-<h3> Custom pipe</h3>
-<h4> The cube of {{num}} is {{num|cube}}
-<hr>
-<h1 [ngStyle]="myColor"> Hello Friends, this is my first components</h1>
 
-<input type ="text" id="txtName" [ngStyle]="myColor">
-
-<input type ="date" id="txtName" style="color:green">
-<hr> 
-<h2>Attribute Directive Demo</h2>
-Investment: <input type ="text"  [(ngModel)]="amount">
-<h2 [ngStyle]="myInvestment"> the invest:{{amount}}</h2>
-
-<button type="submit" (click)="ValidateMyInvestment()"> Validate</button>
-<h3 [hidden]="true"> This  my hidden attribute demo</h3>
-<hr>
-<h2> Strucutal Directive demo</h2>
-<h3 *ngIf="isHidden"> my *ngIf structural directive demo</h3>
-<button type="submit" (click)="toggle()"> Toggle</button>
-<hr>
-
-<ul *ngFor="let xx of data">
-<li>{{xx}}</li>
-</ul>
-<hr>
-<table>
+<h1> Service Demo</h1>
+ {{myStudentDetail|json}} 
+<button type="submit" (click)="GetStudentData()">Fetch</button>
+<table border="1px">
 <tr>
-<th>ROll No</th>
-<th>Name</th>
-<th>City</th>
+<th> Name</th>
+<th>Subject</th>
 </tr>
-<tr *ngFor="let s of student">
-<td>{{s.rollno}}</td>
-<td>{{s.name}}</td>
-<td>{{s.city}}</td>
+<tr *ngFor="let item of myStudentDetail">
+<td>{{item.name}}</td>
+<td>{{item.subject}}</td>
 </tr>
 </table>
+<hr>
+{{userDetails|json}}
+<button type="submit" (click)="GetUserInfo()">Get Users</button>

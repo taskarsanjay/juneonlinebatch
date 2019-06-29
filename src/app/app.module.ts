@@ -10,7 +10,8 @@ import { CubePipe } from './pipe/cube.pipe';
 import { TemplateFormComponent } from './Forms/template.component';
 import { DoctorComponent } from './Forms/doctor.component';
 import { ModelFormComponent } from './Forms/model.component';
-
+import { StudentService } from './services/student.service'
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
     AppComponent,
@@ -25,9 +26,10 @@ import { ModelFormComponent } from './Forms/model.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [], // services - Injectable
-  bootstrap: [ModelFormComponent]// Only component directives which we want to set as startup component
+  providers: [StudentService], // services - Injectable
+  bootstrap: [StudentComponent]// Only component directives which we want to set as startup component
 })
 export class AppModule { }
