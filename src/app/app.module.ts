@@ -12,6 +12,8 @@ import { DoctorComponent } from './Forms/doctor.component';
 import { ModelFormComponent } from './Forms/model.component';
 import { StudentService } from './services/student.service'
 import {HttpClientModule} from '@angular/common/http'
+import { UserComponent } from './services/user.componet';
+
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
     AppComponent,
@@ -20,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http'
     CubePipe,
     TemplateFormComponent,
     DoctorComponent,
-    ModelFormComponent
+    ModelFormComponent,
+    UserComponent
   ],
   imports: [ // Modules
     BrowserModule,
