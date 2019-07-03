@@ -19,3 +19,23 @@
 </table>
 
 <button type="submit" (click)="GetAllUsersInfo()">Fetch Info</button>
+
+<hr>
+
+{{userModel.value|json}}
+<form #userModel="ngForm">
+<div class="form-group">
+Name: <input type="text" #myname="ngModel" name="name1" [(ngModel)]="name" class="form-control">
+</div>
+<div class="form-group">
+Job: <input type="text" name="job" [(ngModel)]="job" class="form-control">
+</div>
+<div class="form-group">
+email: <input type="text" name="email" [(ngModel)]="email" class="form-control">
+</div>
+<div class="form-group">
+city: <input type="text" name="city" [(ngModel)]="city"  class="form-control">
+</div>
+<button type="submit" (click)="SaveMyUser(userModel.value)">Save User</button>
+</form>
+{{userData11|json}}

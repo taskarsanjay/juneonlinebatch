@@ -15,8 +15,18 @@ export class UserService {
             .subscribe(success => { this.allUsers = success },
                 error => { this.allUsers = error }
             )
-            console.log('I am inside Service end')
-            return this.allUsers
+        console.log('I am inside Service end')
+        return this.allUsers
+    }
+    userData: any
+    public SaveUser(data) {
+        console.log(JSON.stringify(data))
+    this.http.post('https://reqres.in/api/users', data)
+            .subscribe(res => { this.userData = res },
+                err => { this.userData = err })
+
+                console.log(JSON.stringify('Service '+this.userData))
+        return this.userData;
     }
 
 }
