@@ -1,0 +1,16 @@
+<h3>{{title}}<h3>
+{{myCity}}
+
+<h3> The received data from child</h3>
+{{getData|json}}
+<hr>
+<child-comp [city]="myCity" (sendData)="GetData($event)"></child-comp>
+<hr>
+
+<hr><hr>
+
+Parent Message -> {{myMessage}}
+<button type="submit" (click)="GetViewChildInfo()">Fetch</button>
+
+<button type="submit" (click)="SendDataToViewChildComponent()">Send data</button>
+<viewchild-comp></viewchild-comp>

@@ -13,6 +13,9 @@ import { ModelFormComponent } from './Forms/model.component';
 import { StudentService } from './services/student.service'
 import {HttpClientModule} from '@angular/common/http'
 import { UserComponent } from './services/user.componet';
+import { ParentComponent } from './comp-communication/parent.component';
+import { ChildComponent } from './comp-communication/child.component';
+import { ViewChildComponent } from './comp-communication/viewchild.component';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -23,7 +26,10 @@ import { UserComponent } from './services/user.componet';
     TemplateFormComponent,
     DoctorComponent,
     ModelFormComponent,
-    UserComponent
+    UserComponent,
+    ParentComponent,
+    ChildComponent,
+    ViewChildComponent
   ],
   imports: [ // Modules
     BrowserModule,
@@ -33,6 +39,6 @@ import { UserComponent } from './services/user.componet';
     HttpClientModule
   ],
   providers: [StudentService], // services - Injectable
-  bootstrap: [StudentComponent]// Only component directives which we want to set as startup component
+  bootstrap: [ParentComponent]// Only component directives which we want to set as startup component
 })
 export class AppModule { }
