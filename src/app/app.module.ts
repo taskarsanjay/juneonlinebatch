@@ -22,6 +22,7 @@ import { HomeComponent } from './routing/home.component';
 import { AboutComponent } from './routing/about.component';
 import { ContactComponent } from './routing/contact.component';
 import { myRoute } from './routing/route.config';
+import { ChildRouterComponent } from './routing/childroute.component';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -39,7 +40,8 @@ import { myRoute } from './routing/route.config';
     LandingComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ChildRouterComponent
   ],
   imports: [ // Modules
     BrowserModule,
