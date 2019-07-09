@@ -3,11 +3,13 @@ import { HomeComponent } from './home.component';
 import { ContactComponent } from './contact.component';
 import { AboutComponent } from './about.component';
 import { ChildRouterComponent } from './childroute.component';
+import { RouteGaurdService } from './routegaurd.service';
 
 export const myRoute:Routes=[
 {path:'', component:HomeComponent},
-{path:'contact', component:ContactComponent},
+{path:'contact', component:ContactComponent, canActivate:[RouteGaurdService]},
 {path:'about', component:AboutComponent, children:[
-    {path:'vision', component:ChildRouterComponent}
-]}
+    {path:'vision', component:ChildRouterComponent},
+    {path:'Goal', component:ChildRouterComponent}
+], canActivateChild:[RouteGaurdService], canActivate:[RouteGaurdService]}
 ]

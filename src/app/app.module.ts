@@ -23,6 +23,7 @@ import { AboutComponent } from './routing/about.component';
 import { ContactComponent } from './routing/contact.component';
 import { myRoute } from './routing/route.config';
 import { ChildRouterComponent } from './routing/childroute.component';
+import { RouteGaurdService } from './routing/routegaurd.service';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -51,7 +52,7 @@ import { ChildRouterComponent } from './routing/childroute.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [StudentService], // services - Injectable
+  providers: [StudentService, RouteGaurdService], // services - Injectable
   bootstrap: [LandingComponent]// Only component directives which we want to set as startup component
 })
 export class AppModule { }
