@@ -16,6 +16,12 @@ import { UserComponent } from './services/user.componet';
 import { ParentComponent } from './comp-communication/parent.component';
 import { ChildComponent } from './comp-communication/child.component';
 import { ViewChildComponent } from './comp-communication/viewchild.component';
+import { LandingComponent } from './routing/landing.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './routing/home.component';
+import { AboutComponent } from './routing/about.component';
+import { ContactComponent } from './routing/contact.component';
+import { myRoute } from './routing/route.config';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -29,16 +35,21 @@ import { ViewChildComponent } from './comp-communication/viewchild.component';
     UserComponent,
     ParentComponent,
     ChildComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    LandingComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [ // Modules
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(myRoute),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [StudentService], // services - Injectable
-  bootstrap: [ParentComponent]// Only component directives which we want to set as startup component
+  bootstrap: [LandingComponent]// Only component directives which we want to set as startup component
 })
 export class AppModule { }

@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<a routerLink="/">Home</a>
+<a routerLink="/about">About</a>
+<a routerLink="/contact">Contact</a>
+<div>
+ <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="/">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+    </div>
+    <br>
+    <router-outlet></router-outlet>
