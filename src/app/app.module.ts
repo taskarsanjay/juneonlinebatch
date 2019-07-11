@@ -20,10 +20,10 @@ import { LandingComponent } from './routing/landing.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './routing/home.component';
 import { AboutComponent } from './routing/about.component';
-import { ContactComponent } from './routing/contact.component';
 import { myRoute } from './routing/route.config';
 import { ChildRouterComponent } from './routing/childroute.component';
 import { RouteGaurdService } from './routing/routegaurd.service';
+import { ContactComponent } from './routing/contact.component';
 
 @NgModule({
   declarations: [ // Directives - Comp/attri/structural & pipe
@@ -41,7 +41,6 @@ import { RouteGaurdService } from './routing/routegaurd.service';
     LandingComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent,
     ChildRouterComponent
   ],
   imports: [ // Modules
