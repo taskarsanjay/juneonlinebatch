@@ -11,5 +11,5 @@ export const myRoute:Routes=[
 {path:'about', component:AboutComponent, children:[
     {path:'vision', component:ChildRouterComponent},
     {path:'Goal', component:ChildRouterComponent}
-], canActivateChild:[RouteGaurdService], canActivate:[RouteGaurdService]}
 ]
+], canActivateChild:[RouteGaurdService], canActivate:[RouteGaurdService]}
