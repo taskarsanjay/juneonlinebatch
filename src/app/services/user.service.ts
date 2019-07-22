@@ -9,7 +9,6 @@ export class UserService {
 
     public allUsers: any
     public GetAllUser() {
-
         console.log('I am inside Service Begin')
         this.http.get('https://reqres.in/api/users?page=2')
             .subscribe(success => { this.allUsers = success },
